@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://qdwu40ghvo1y"]
+
+[ext_resource type="Shader" path="res://scenes/water/water_surface.gdshader" id="1_83jk0"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_my6v4"]
+subdivide_width = 8
+subdivide_depth = 8
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_16xvv"]
+render_priority = 0
+shader = ExtResource("1_83jk0")
+shader_parameter/N = null
+shader_parameter/beerFactor = null
+shader_parameter/scale = null
+
+[node name="Node3d" type="Node3D"]
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_my6v4")
+surface_material_override/0 = SubResource("ShaderMaterial_16xvv")

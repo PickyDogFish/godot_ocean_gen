@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dadi7sxjbthtm"]
+
+[ext_resource type="Script" path="res://scenes/player/movement.gd" id="1_qeq24"]
+
+[sub_resource type="CapsuleShape3D" id="8"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_qeq24")
+
+[node name="CollisionPolygon" type="CollisionShape3D" parent="."]
+shape = SubResource("8")
+
+[node name="PivotX" type="Marker3D" parent="."]
+
+[node name="Camera" type="Camera3D" parent="PivotX"]
+transform = Transform3D(1, 0, 0, 0, 0.999883, 0.0152887, 0, -0.0152887, 0.999883, 0, 0.713183, -0.543703)
